@@ -1,0 +1,110 @@
+{
+    "socialMedia":{        
+        "linkedin":"https://www.linkedin.com/in/rajkothari634/",
+        "github":"https://github.com/rajkothari634",
+        "insta":"https://www.instagram.com/_raj.kothari_6_3_4_/"
+    },
+    "articles":[
+        {
+            "topic":"Machine Learning",
+            "title":"SVM",
+            "date":"12-10-2020",
+            "imgUrl":"https://cdn-images-1.medium.com/max/2000/1*FQaecHvrURA7xy4wmethUw.jpeg",
+            "path":"https://learnturtle.co/articles/machine-learning/support-vector-machine/"
+        },
+        {
+            "topic":"Tech Writting",
+            "title":"LAERn turtle",
+            "date":"12-10-2020",
+            "imgUrl":"https://source.unsplash.com/J1R-xl_TPPM/1920x1080",
+            "path":"https://learnturtle.co/articles/general/learnturtle-writer-form-guidance/"
+        },
+        {
+            "topic":"Python",
+            "title":"XML Parser Using Python",
+            "date":"12-10-2020",
+            "imgUrl":"https://hackernoon.com/drafts/q141s3xfs.png",
+            "path":"https://learnturtle.co/articles/programming/xml-parser-using-python/"
+        },
+        {
+            "topic":"Machine Learning",
+            "title":"How to start Machine Learning",
+            "date":"12-10-2020",
+            "imgUrl":"https://i.ibb.co/XbDBbz0/sourcetoday-2874-gettyimages-966248982-0-0.png",
+            "path":"https://learnturtle.co/articles/machine-learning/how-to-start-machine-learning/"
+        },
+        {
+            "topic":"Technology",
+            "title":"Is Graphene The Future of Computing??",
+            "date":"12-10-2020",
+            "imgUrl":"https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/ca_1115NID_Carbon_online.jpg?itok=k4KkmUGl",
+            "path":"https://learnturtle.co/articles/electronics/is-graphene-the-future-of-computing/"
+        }
+    ],
+    "techSkill": [
+        {
+            "techArea":"Node.js",
+            "techStrength": 9.5
+        },
+        {
+            "techArea":"MongoDb",
+            "techStrength": 9
+        },
+        {
+            "techArea":"React.js",
+            "techStrength": 9
+        },
+        {
+            "techArea":"Angroid Development",
+            "techStrength": 9.5
+        },
+        {
+            "techArea":"Data Structure and Algorithm",
+            "techStrength": 7
+        },
+        {
+            "techArea":"Machine Learning",
+            "techStrength": 7
+        },
+        {
+            "techArea":"Postgresql",
+            "techStrength": 7
+        },
+        {
+            "techArea":"Angular Js 8",
+            "techStrength": 7
+        }
+    ],
+    "otherSkill": [
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        },
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        },
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        },
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        },
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        },
+        {
+            "name":"",
+            "line":"",
+            "image":""
+        }
+    ]
+}
