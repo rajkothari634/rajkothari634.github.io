@@ -118,7 +118,4 @@ const MediumLogo = (props) => {
     </svg>
 }
 
-
-
-
 export { lightTheme, darkTheme, device, MediumLogo,InstaLogo, GithubLogo, LinkedInLogo ,Row, Col, RocketLogo }

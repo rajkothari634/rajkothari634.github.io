@@ -42,7 +42,6 @@ const SkillArea = styled.div`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: semi-bold;
 `
-
 const getTechArray = () => {
     let rows = [];
     let techSkill = MyData.techSkill
@@ -56,27 +55,6 @@ const getTechArray = () => {
     }
     return rows;
 }
-
-
-
-//{/* <BorderLinearProgress variant="determinate" value={50} /> */}
-const SkillDiv = styled.div`
-    width: 98vw;
-    height: 100vh;
-    position : absolute;
-    background-color: ${lightTheme.dark};
-    top: 288vh;
-`
-
-const HeaderContainer = styled(Row)`
-    height: 99vh;
-    white-space: nowrap;
-    position: relative;
-    overflow-x:scroll;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-`
 const HeaderSideSingleCol = styled.div`
     margin: 40px;
     margin-top: 0px;
@@ -156,16 +134,6 @@ const getOtherSkill = () => {
     }
     return cols;
 }
-const TechSideSingleCol = styled(Col)`
-    margin-top: 70px;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    float: none;
-    height: 80vh;
-    min-width: 250px;
-    width: 600px;
-    zoom: 1;
-`
 const TechContainerSkill = styled.div`
     height: 50vh;
     width: 100%;

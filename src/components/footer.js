@@ -1,16 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { lightTheme, darkTheme, device,MediumLogo, Row, Col,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
+import { MediumLogo, Row, Col,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
 import MyData from "../../mydata.json";
-import Grid from "@material-ui/core/Grid";
 
-const ConnectLine = styled.p`
-    font-family: Open-sans, Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    text-align: center;
-    margin: 25px;
-    margin-bottom: 10px;    
-`
 const SocialDiv = styled(Row)`
     spacing: 3;
     justify-content: center;
@@ -54,8 +46,6 @@ const MediaLogos = () => {
     }
     return rows
 }
-
-
 const FooterDiv = styled(Col)`
     width: 99vw;
     height: 30px;
@@ -65,7 +55,6 @@ const FooterDiv = styled(Col)`
     border-top: 1px solid #cacaca;
     background-color: #ffffff;
 `
-
 
 const Footer = (props) => {
     return <FooterDiv>

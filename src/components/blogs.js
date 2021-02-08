@@ -13,7 +13,6 @@ const Div = styled.div`
     min-height: 99vh;
     background-color: #f7f7f7;
 `
-
 const HeaderContainer = styled.div`
 height:90vh;
 white-space: nowrap;
@@ -31,7 +30,6 @@ const HeaderSideSingleCol = styled.div`
     display: inline-block;
     zoom: 1;
 `
-
 const TopArticleCardContainer = styled(Col)`
     justify-content: flex-end;
     align-items: flex-start;
@@ -42,7 +40,6 @@ const TopArticleCardContainer = styled(Col)`
     z-index: 0;
     border-radius: 4px;
 `
-
 const TopArticleContent = styled(Col)`
     justify-content: flex-end;
     align-items: flex-start;
@@ -56,7 +53,6 @@ const TopArticleContent = styled(Col)`
     border-radius: 4px;
     z-index: 20;
 `
-
 const TopArticleBg = styled.img`
     object-fit: cover;
     object-position: center;
@@ -68,7 +64,6 @@ const TopArticleBg = styled.img`
     z-index: 0;
     border-radius: 4px;
 `
-
 const TopArticleMask = styled.div`
     position: absolute;
     width: 100%;
@@ -82,7 +77,6 @@ const TopArticleMask = styled.div`
     left: 0;
     border-radius: 4px;
 `
-
 const AuthorRow = styled(Row)`
    font-family: Barlow, sans-serif;
    font-weight: 300;
@@ -91,7 +85,6 @@ const AuthorRow = styled(Row)`
    align-items: center;
    color: #fff;
 `
-
 const AuthorLink = styled(Link)`
     font-family: Barlow, sans-serif;
     font-weight: 300;
@@ -105,13 +98,11 @@ const AuthorLink = styled(Link)`
         text-decoration: underline;
     }
 `
-
 const AuthorIcon = styled.img`
     width: 18px;
     height: 18px;
     margin-right: 8px;
 `
-
 const TopArticleTitle = styled.a`
     font-family: Barlow, sans-serif;
     font-weight: bold;
@@ -135,7 +126,6 @@ const TopArticleTitle = styled.a`
         font-size: ${props => props.titleSize};
     }
 `
-
 const TopArticleCategory = styled.a`
     font-family: Barlow, sans-serif;
     font-weight: 300;
@@ -158,10 +148,8 @@ const TopArticleCategory = styled.a`
         
     }
 `
-
 const TopArticleCard = (props) => {
     const maskRef = useRef(0)
-
     return <TopArticleCardContainer onMouseEnter={() => maskRef.current.style.opacity = 0.2}
                                     onMouseLeave={() => maskRef.current.style.opacity = 0.5}>
         <TopArticleContent titleSize={props.titleSize}>
@@ -178,7 +166,6 @@ const TopArticleCard = (props) => {
     </TopArticleCardContainer>
 
 }
-
 const MainArticleContainer = styled.div`
     margin: 40px;
     margin-top: 0px;
@@ -190,7 +177,6 @@ const MainArticleContainer = styled.div`
     display: inline-block;
     zoom: 1;
 `
-
 const SideArticleContainer = styled.div`
     width: 30vw;
     min-width: 250px;
@@ -198,7 +184,6 @@ const SideArticleContainer = styled.div`
     margin-bottom: 5vh;
     margin-top: 5vh;
 `
-
 const getArticleColArray = () => {
     let rows = [];
     console.log("opopo")
@@ -242,7 +227,6 @@ const Heading = styled.p`
     text-align: center;
     color:${lightTheme.primary};
 `
-
 const TopArticlesList = (props) => {
     return (
         <Div>
@@ -254,6 +238,4 @@ const TopArticlesList = (props) => {
         </Div>
     )
 }
-
 export default TopArticlesList
-export { TopArticleCard }

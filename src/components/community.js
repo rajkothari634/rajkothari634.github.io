@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { lightTheme, darkTheme, device, Row, Col,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
-import MyData from "../../mydata.json";
+import { lightTheme,Row, Col} from "./Global";
 import CommunityBg from "../images/ic_communitybg.svg"
 const UpperDiv = styled.div`
     width: 98vw;
@@ -75,8 +74,6 @@ const RespImg = styled.img`
     margin-bottom: 10%;
     border-radius: 10px;
 `
-
-
 const Community = () => {
     return <UpperDiv>
         <Heading>Building Community</Heading>

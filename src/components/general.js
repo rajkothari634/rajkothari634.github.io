@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components"
-import { lightTheme, darkTheme,MediumLogo, device, Row, Col,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
+import { lightTheme, MediumLogo, device, Row,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
 import MyData from "../../mydata.json";
 import BackBg from "../images/ic_backgeneral.svg"
-
 import Typewriter from 'typewriter-effect';
- 
-
-
 
 const GeneralDiv = styled.div`
     width: 98vw;
@@ -54,15 +50,6 @@ const socialMediaClick = (link)=> {
     console.log(link);
     window.open(link);
 }
-const GeneralBackDiv = styled.div`
-    width: 50vw;
-    height: 71vh;
-    position: absolute;
-    top: 28vh;
-    right: 0px;
-    
-`
-
 const MediaLogos = () => {
     let socialMedia = MyData.socialMedia;
     let rows = [];
@@ -96,7 +83,6 @@ const MediaLogos = () => {
     }
     return rows
 }
-
 const HelloDiv = styled.div`
     position: absolute;
     width: 70vw;
@@ -107,7 +93,6 @@ const HelloDiv = styled.div`
         width: 35vw;
     }
 `
-
 const HelloPara = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -143,7 +128,6 @@ const IntroDetail = styled.div`
         text-align: left;
     }
 `
-
 const GeneralBackBg = styled.img`
     right: 15vw;
     width: 70vw;
@@ -174,7 +158,7 @@ const General = (props) => {
             <IntroDetail>
             <Typewriter
                 options={{
-                    strings: ["I am a Passionate Developer.", "I am a Tech enthusiast.","MERN Stack, Mobile Development or Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
+                    strings: ["I am a Passionate Developer.", "I am a Tech enthusiast.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
                     autoStart: true,
                     loop: true,
                 }}
