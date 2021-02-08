@@ -20,11 +20,12 @@ const ItemDiv = styled(Col)`
 `
 
 const AwardDiv = styled.div`
-    width: 98vw;
+    width: 100vw;
     min-height: 98vh;
-    background-color: ${lightTheme.dark};
+    background-color: ${lightTheme.background};
     top: 288vh;
 `
+
 const Heading = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -32,7 +33,7 @@ const Heading = styled.p`
     text-align: center;
     color:${lightTheme.primary};
     margin: 20px;
-    margin-top: 40px;
+    margin-top: 80px;
 `
 const ItemTitle = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
@@ -68,13 +69,13 @@ const Award = (props) => {
                     <ItemDetail>Silver Medalist in Intramural National Institute of Technology, Patna</ItemDetail>
                 </ItemDiv>
             </Grid>
-            <Grid  item lg={3} md={3} sm={7} xs={7}  >
+            {/* <Grid  item lg={3} md={3} sm={7} xs={7}  >
             <ItemDiv>
                     <img src={tabletennis} style={{width: "120px",height: "120px"}} />
                     <ItemTitle>Table Tennis</ItemTitle>
                     <ItemDetail>Bronze Medalist in Intramural National Institute of Technology, Patna</ItemDetail>
                 </ItemDiv>
-            </Grid>
+            </Grid> */}
         </Grid>
     </AwardDiv>
 }

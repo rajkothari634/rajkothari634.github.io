@@ -2,6 +2,7 @@
     "socialMedia":{        
         "linkedin":"https://www.linkedin.com/in/rajkothari634/",
         "github":"https://github.com/rajkothari634",
+        "medium":"https://rajkothari634.medium.com/",
         "insta":"https://www.instagram.com/_raj.kothari_6_3_4_/"
     },
     "articles":[
@@ -14,7 +15,7 @@
         },
         {
             "topic":"Tech Writting",
-            "title":"LAERn turtle",
+            "title":"Learn turtle",
             "date":"12-10-2020",
             "imgUrl":"https://source.unsplash.com/J1R-xl_TPPM/1920x1080",
             "path":"https://learnturtle.co/articles/general/learnturtle-writer-form-guidance/"
@@ -43,7 +44,7 @@
     ],
     "techSkill": [
         {
-            "techArea":"Node.js",
+            "techArea":"NodeJs",
             "techStrength": 9.5
         },
         {
@@ -51,20 +52,20 @@
             "techStrength": 9
         },
         {
-            "techArea":"React.js",
+            "techArea":"ReactJs",
             "techStrength": 9
         },
         {
-            "techArea":"Angroid Development",
+            "techArea":"Android Application Development",
             "techStrength": 9.5
         },
         {
-            "techArea":"Data Structure and Algorithm",
-            "techStrength": 7
+            "techArea":"Machine Learning",
+            "techStrength": 8.5
         },
         {
-            "techArea":"Machine Learning",
-            "techStrength": 7
+            "techArea":"Data Structure And Algorithm",
+            "techStrength": 8
         },
         {
             "techArea":"Postgresql",
@@ -77,34 +78,34 @@
     ],
     "otherSkill": [
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"Always there to make changes using programming.",
+            "heading":"Programmer",
+            "imageUrl":"https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png"
         },
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"Spreading knowldege through tech blog in my free time and for freelancing.",
+            "heading":"Tech Writer",
+            "imageUrl":"https://i.ibb.co/xzqGj5m/feather-pen-2.png"
         },
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"Mentoring person to develop themselve and me too.",
+            "heading":"Mentor",
+            "imageUrl":"https://www.pinclipart.com/picdir/big/199-1993722_looking-for-a-mentor-comments-mentor-symbol-clipart.png"
         },
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"I love to play table tennis and won several competition in table tennis too.",
+            "heading":"Table Tennis Player",
+            "imageUrl":"https://i.ibb.co/NsXv0K5/table-tennis-1.png"
         },
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"Reading about new technology and stuff related to space.",
+            "heading":"Technology",
+            "imageUrl":"https://i.ibb.co/rHqB23h/start-up-1.png"
         },
         {
-            "name":"",
-            "line":"",
-            "image":""
+            "detail":"Love to go to new places and meet new people. ",
+            "heading":"Traveler",
+            "imageUrl":"https://i.ibb.co/Yh4DJgF/tourist-1.png"
         }
     ]
 }

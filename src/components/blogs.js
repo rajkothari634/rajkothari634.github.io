@@ -8,9 +8,10 @@ import blogBg from "../images/ic_blogbg.svg"
 import { Link } from "gatsby"
 import { navigate } from "gatsby-link"
 
-const Divv = styled.div`
-    width: 98vw;
+const Div = styled.div`
+    width: 100vw;
     min-height: 99vh;
+    background-color: #f7f7f7;
 `
 
 const HeaderContainer = styled.div`
@@ -26,6 +27,7 @@ const HeaderSideSingleCol = styled.div`
     float: none;
     height: 90%;
     width: 40vw;
+    min-width: 400px;
     display: inline-block;
     zoom: 1;
 `
@@ -120,6 +122,10 @@ const TopArticleTitle = styled.a`
     margin-bottom: 16px;
     width: calc(100% - 40px);
     padding-right: 10px;
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     
     &:hover {
         text-decoration: underline;
@@ -180,12 +186,14 @@ const MainArticleContainer = styled.div`
     float: none;
     height: 90%;
     width: 40vw;
+    min-width: 250px;
     display: inline-block;
     zoom: 1;
 `
 
 const SideArticleContainer = styled.div`
     width: 30vw;
+    min-width: 250px;
     height: 40%;
     margin-bottom: 5vh;
     margin-top: 5vh;
@@ -227,16 +235,23 @@ const getArticleColArray = () => {
     }
     return rows
 } 
-
+const Heading = styled.p`
+    font-family: Open-sans, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color:${lightTheme.primary};
+`
 
 const TopArticlesList = (props) => {
     return (
-        <Divv>
+        <Div>
             <img src={blogBg} style={{marginLeft:"8vw",position: "absolute",width:"90vw",height:"90vh"}}/>
+            <Heading>Blogs</Heading>
             <HeaderContainer>
                 {getArticleColArray()}
             </HeaderContainer>
-        </Divv>
+        </Div>
     )
 }
 
