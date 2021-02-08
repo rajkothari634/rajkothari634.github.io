@@ -33,7 +33,6 @@ const HeaderContainer = styled(Row)`
     align-items: center;
     padding-bottom: 20px;
 `
-
 const CommunityInfoDiv = styled(Col)`
     min-width: 500px;
     height: 98%;

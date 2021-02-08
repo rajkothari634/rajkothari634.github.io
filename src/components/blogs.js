@@ -3,10 +3,14 @@ import styled from "styled-components"
 import { lightTheme, darkTheme, device,Row, Col, LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
 import myData from "../../mydata.json"
 import clock from "../images/ic_person.svg"
-import person from "../images/ic_clock.svg"
 import blogBg from "../images/ic_blogbg.svg"
 import { Link } from "gatsby"
 import { navigate } from "gatsby-link"
+import SvmImage from "../images/svmArticleBg.jpeg"
+import Graphine from "../images/graphine.jpg"
+import LearnTurtle from "../images/learnturtleArticleBg.jpeg"
+import MlStart from "../images/mlstartArticleBg.png"
+import PythonArticle from "../images/pythonArticleBg.png"
 
 const Div = styled.div`
     width: 100vw;
@@ -148,6 +152,22 @@ const TopArticleCategory = styled.a`
         
     }
 `
+const getImage = (image) => {
+    switch(image){
+        case "svmArticleBg":
+            return SvmImage;
+        case "graphine":
+            return Graphine;
+        case "learnturtleArticleBg":
+            return LearnTurtle;
+        case "mlstartArticleBg":
+            return MlStart;
+        case "pythonArticleBg":
+            return PythonArticle;
+        default :
+            return SvmImage;
+    }
+}
 const TopArticleCard = (props) => {
     const maskRef = useRef(0)
     return <TopArticleCardContainer onMouseEnter={() => maskRef.current.style.opacity = 0.2}
@@ -162,7 +182,7 @@ const TopArticleCard = (props) => {
             </AuthorRow>
         </TopArticleContent>
         <TopArticleMask ref={maskRef} onClick={() => navigate(props.path)}/>
-        <TopArticleBg src={props.imgUrl}/>
+        <TopArticleBg src={getImage(props.imgUrl)}/>
     </TopArticleCardContainer>
 
 }
