@@ -158,7 +158,7 @@ const General = (props) => {
             <IntroDetail>
             <Typewriter
                 options={{
-                    strings: ["I am a Passionate Developer.", "I am a Tech enthusiast.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
+                    strings: ["I am a Passionate Developer.", "I am a Tech enthusiast person.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
                     autoStart: true,
                     loop: true,
                 }}
