@@ -23,16 +23,22 @@ white-space: nowrap;
 position: relative;
 overflow-x:scroll;
 `
-const HeaderSideSingleCol = styled.div`
+const HeaderSideSingleCol = styled(Row)`
     margin: 40px;
     margin-top: 0px;
-    margin-right: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
     float: none;
     height: 90%;
     width: 40vw;
-    min-width: 400px;
+    min-width: 320px;
     display: inline-block;
     zoom: 1;
+    @media ${device.tablet} {
+        margin: 40px;
+        margin-top: 0px;
+        margin-right: 20px; 
+    }
 `
 const TopArticleCardContainer = styled(Col)`
     justify-content: flex-end;
@@ -152,6 +158,31 @@ const TopArticleCategory = styled.a`
         
     }
 `
+const MainArticleContainer = styled.div`
+    margin: 40px;
+    margin-top: 0px;
+    margin-right: 80px;
+    float: none;
+    height: 90%;
+    width: 40vw;
+    min-width: 250px;
+    display: inline-block;
+    zoom: 1;
+`
+const SideArticleContainer = styled.div`
+    width: 30vw;
+    min-width: 250px;
+    height: 40%;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+`
+const Heading = styled.p`
+    font-family: Open-sans, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color:${lightTheme.primary};
+`
 const getImage = (image) => {
     switch(image){
         case "svmArticleBg":
@@ -186,27 +217,8 @@ const TopArticleCard = (props) => {
     </TopArticleCardContainer>
 
 }
-const MainArticleContainer = styled.div`
-    margin: 40px;
-    margin-top: 0px;
-    margin-right: 80px;
-    float: none;
-    height: 90%;
-    width: 40vw;
-    min-width: 250px;
-    display: inline-block;
-    zoom: 1;
-`
-const SideArticleContainer = styled.div`
-    width: 30vw;
-    min-width: 250px;
-    height: 40%;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
-`
 const getArticleColArray = () => {
     let rows = [];
-    console.log("opopo")
     let articleArray = myData["articles"];
     let mainContainer = <MainArticleContainer>
     <TopArticleCard titleSize={"28px"} 
@@ -240,13 +252,7 @@ const getArticleColArray = () => {
     }
     return rows
 } 
-const Heading = styled.p`
-    font-family: Open-sans, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    color:${lightTheme.primary};
-`
+
 const TopArticlesList = (props) => {
     return (
         <Div>

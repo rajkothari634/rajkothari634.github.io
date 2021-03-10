@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { lightTheme, Col} from "./Global";
+import { lightTheme, Col, device} from "./Global";
 import graduation from "../images/ic_graduation.svg"
 import tabletennis from "../images/ic_tabletennis.svg"
 import Grid from "@material-ui/core/Grid";
@@ -30,7 +30,11 @@ const Heading = styled.p`
     text-align: center;
     color:${lightTheme.primary};
     margin: 20px;
-    margin-top: 80px;
+    margin-top: 10px;
+    @media ${device.tablet} {
+        margin-top: 80px;
+        margin-bottom: 140px;
+    }
 `
 const ItemTitle = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
@@ -47,19 +51,18 @@ const ItemDetail = styled.p`
     margin: 25px;
     margin-bottom: 10px;    
 `
-
 const Award = (props) => {
     return <AwardDiv>
         <Heading>Award</Heading>
-        <Grid container spacing={3} style={{marginTop: "150px"}} justify={"space-around"}>
-            <Grid item lg={3} md={3} sm={7} xs={7}  >
+        <Grid container spacing={3} style={{marginTop: "10px",marginBottom: "20px"}} justify={"space-around"}>
+            <Grid item lg={3} md={4} sm={7} xs={11}  >
                 <ItemDiv>
                     <img src={graduation} style={{width: "120px",height: "120px"}} />
                     <ItemTitle>MMVY Scholarship</ItemTitle>
                     <ItemDetail>Get qualified for MukhyaMantri Vidhya Yojna</ItemDetail>
                 </ItemDiv>
             </Grid>
-            <Grid  item lg={3} md={3} sm={7} xs={7}  >
+            <Grid  item lg={3} md={4} sm={7} xs={11}  >
             <ItemDiv>
                     <img src={tabletennis} style={{width: "120px",height: "120px"}} />
                     <ItemTitle>Table Tennis</ItemTitle>

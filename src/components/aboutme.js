@@ -4,7 +4,7 @@ import { lightTheme, device, Row, Col} from "./Global";
 import aboutmebg from "../images/ic_aboutmebg.svg"
 
 const AboutMeDiv = styled(Row)`
-    width: 100vw;
+    width: 99vw;
     min-height: 99vh;
     position: relative;
     background-color: ${lightTheme.background};
@@ -18,33 +18,32 @@ const Heading = styled.p`
     min-width: 300px;
 `
 const Detail = styled.p`
-    font-family: Open-sans, Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     font-weight: regular;
-    font-size: 1.1em;
+    font-size: 1.0em;
     margin-top: 0px;
     color:${lightTheme.primary};
-    min-width: 300px;
 `
 const AboutMeBackImg = styled.img`
     width: 60vw;
     position: absolute;
     top: 20px;
     left: 20vw;
-    @media ${device.laptop} {
+    display: none;
+    @media ${device.tablet} {
         bottom: 0px;
         left: 0px;
-
+        display: inline;
     }
 `
 const AboutMeDetail = styled(Col)`
     width: 80vw;
     position: absolute;
-    min-width: 300px;
     justify-content: center;
     align-items: flex-start;
-    bottom: 10vh;
+    bottom: 20vh;
     left: 5vw;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         width: 30vw;
         bottom: 25vh;
         left: 60vw;

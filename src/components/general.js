@@ -19,23 +19,25 @@ const GeneralDiv = styled.div`
 const SocialDiv = styled(Row)`
     position: absolute;
     spacing: 3;
-    top: 50px;
-    left: 6vw;
-    height: 30px;
+    top: 1vh;
+    left: 8vw;
     width: 30vw;
+    @media ${device.tablet} {
+        top: 5vh;
+        right: 6vw;
+    }
 `
 const ResumeDiv = styled(Row)`
     position: absolute;
     justify-content: center;
     align-items: center;
-    top:50px;
-    right: 6vw;
-    width: 150px;
-    height: 40px;
+    top: 2vh;
+    right: 8vw;
     border-radius: 20px;
+    width: 100px;
+    height: 30px;
     font-family: Open-sans, Arial, Helvetica, sans-serif;
-    font-size:20px;
-    font-weight: bold;
+    font-size: 18px;
     transition-duration: 0.4s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: ${lightTheme.dark};
@@ -45,9 +47,15 @@ const ResumeDiv = styled(Row)`
         background-color: ${lightTheme.primary};
         color: ${lightTheme.dark};
     }
+    @media ${device.tablet} {
+        font-weight: bold;
+        width: 150px;
+        height: 40px;
+        top: 5vh;
+        right: 6vw;
+    }
 `
 const socialMediaClick = (link)=> {
-    console.log(link);
     window.open(link);
 }
 const MediaLogos = () => {
@@ -85,56 +93,59 @@ const MediaLogos = () => {
 }
 const HelloDiv = styled.div`
     position: absolute;
-    width: 70vw;
-    left: 15vw;
+    width: 90vw;
+    left: 5vw;
     top: 45vh;
-    @media ${device.laptop} {
-        left: 10vw;
+    @media ${device.tablet} {
+        left: 7vw;
         width: 35vw;
     }
 `
 const HelloPara = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 55px;
+    font-size: 2.5em;
     color:${lightTheme.secondary};
     margin: 20px;
     text-align: right;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         text-align: left;
+        font-size: 3.3em;
     }
 `
 const Intro = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2.0em;
     color:${lightTheme.light};
     margin: 20px;
     text-align: right;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         text-align: left;
+        font-size: 2.5em;
     }
 `
 const IntroDetail = styled.div`
     font-family: Helvetica;
     font-weight: regular;
-    font-size: 25px;
+    font-size: 1.2em;
     letter-spacing: 3px;
     color:${lightTheme.primary};
     margin: 20px; 
     margin-top: 25px; 
     text-align: right;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         text-align: left;
+        font-size: 1.6em;
     }
 `
 const GeneralBackBg = styled.img`
-    right: 15vw;
-    width: 70vw;
-    height: 60vh;
-    top: 10vh;
+    right: 5vw;
+    width: 95vw;
+    height: 50vh;
+    top: 0px;
     position: absolute;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
         width: 50vw;
         height: 71vh;
         top: 28vh;
@@ -156,13 +167,13 @@ const General = (props) => {
             <Intro>I am</Intro>
             <Intro>Raj Kothari</Intro>
             <IntroDetail>
-            <Typewriter
-                options={{
-                    strings: ["I am a Passionate Developer.", "I am a Tech enthusiast person.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
-                    autoStart: true,
-                    loop: true,
-                }}
-            />
+                <Typewriter
+                    options={{
+                        strings: ["I am a Passionate Developer.", "I am a Tech enthusiast person.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                />
             </IntroDetail>
         </HelloDiv>
     </GeneralDiv>

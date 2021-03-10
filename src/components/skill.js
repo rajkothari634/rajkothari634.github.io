@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { lightTheme, Row, Col, RocketLogo} from "./Global";
+import { lightTheme, Row, Col, RocketLogo, device} from "./Global";
 import MyData from "../../mydata.json";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -42,19 +42,6 @@ const SkillArea = styled.div`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: semi-bold;
 `
-const getTechArray = () => {
-    let rows = [];
-    let techSkill = MyData.techSkill
-    for(let i =0; i<techSkill.length;i++){
-       let singleTech =  <Grid item lg={5} md={5} sm={5} xs={5}>
-           <SkillArea>{techSkill[i].techArea}</SkillArea>
-           <BorderLinearProgress variant="determinate" value={10*techSkill[i].techStrength} />
-        </Grid>
-
-        rows.push(singleTech)
-    }
-    return rows;
-}
 const HeaderSideSingleCol = styled.div`
     margin: 40px;
     margin-top: 0px;
@@ -62,7 +49,7 @@ const HeaderSideSingleCol = styled.div`
     float: none;
     height: 85%;
     width: 29vw;
-    min-width: 250px;
+    min-width: 320px;
     display: inline-block;
     zoom: 1;
 `
@@ -70,7 +57,6 @@ const SideContainerSkill = styled.div`
     height: 50%;
     margin-bottom: 5vh;
     width: 100%;
-    margin-top: 5vh;
 `
 const OtherSkillDiv = styled(Row)`
     width: 100%;
@@ -87,7 +73,7 @@ const OtherSkillHeading = styled.div`
     width: 100%;
     text-align: center;
     color: ${lightTheme.primary};
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
 `
@@ -101,6 +87,26 @@ const OtherSkillDetail = styled.div`
     margin-top: 10px;
     font-family: Open-sans, Arial, Helvetica, sans-serif;
 `
+const TechContainerSkill = styled.div`
+    height: 70vh;
+    width: 100%;
+    min-width: 250px;
+    margin-top: 5vh;
+    @media ${device.tablet} {
+        height: 50vh;
+    }
+`
+const Heading = styled.p`
+    font-family: Open-sans, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+    color:${lightTheme.primary};
+    @media ${device.tablet} {
+        margin-top: 10vh;
+    }
+`
 const OtherSkill = (props) => {
     return <OtherSkillDiv>
         <img style={{width:"25%",height: "40%",margin:"5%",marginLeft:"10%",marginTop:"0%"}} src={props.imageUrl} />
@@ -110,14 +116,6 @@ const OtherSkill = (props) => {
         </Col>
     </OtherSkillDiv>
 }
-const Heading = styled.p`
-    font-family: Open-sans, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 10vh;
-    color:${lightTheme.primary};
-`
 const getOtherSkill = () => {
     let cols = [];
     let otherSkill = MyData.otherSkill;
@@ -134,12 +132,19 @@ const getOtherSkill = () => {
     }
     return cols;
 }
-const TechContainerSkill = styled.div`
-    height: 50vh;
-    width: 100%;
-    min-width: 250px;
-    margin-top: 5vh;
-`
+const getTechArray = () => {
+    let rows = [];
+    let techSkill = MyData.techSkill
+    for(let i =0; i<techSkill.length;i++){
+       let singleTech =  <Grid item lg={5} md={5} sm={5} xs={5}>
+           <SkillArea>{techSkill[i].techArea}</SkillArea>
+           <BorderLinearProgress variant="determinate" value={10*techSkill[i].techStrength} />
+        </Grid>
+
+        rows.push(singleTech)
+    }
+    return rows;
+}
 const Skill = (props) => {
     return <AboveDiv>
         {/* <img src={blogBg} style={{marginLeft:"8vw",position: "absolute",width:"90vw",height:"90vh"}}/> */}
@@ -148,14 +153,14 @@ const Skill = (props) => {
         <div>
             <Heading>Technical Skills</Heading>
             <TechContainerSkill>
-                <Grid container style={{width:"99vw"}} spacing={2} alignContent={"center"} justify={"space-around"} >
+                <Grid container style={{height: "70vh",width:"99vw"}} spacing={2} alignContent={"space-around"} justify={"space-around"} >
                     {getTechArray()}
                 </Grid>
             </TechContainerSkill>
         </div>
         <div>
                 <Heading>My Skills</Heading>
-                <Row style={{marginTop:"30px",marginRight:"30px",height:"70vh"}}>
+                <Row style={{marginRight:"30px",height:"70vh"}}>
                     {getOtherSkill()}
                 </Row>
         </div>

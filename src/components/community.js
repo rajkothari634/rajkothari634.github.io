@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { lightTheme,Row, Col} from "./Global";
+import { lightTheme,Row, Col, device} from "./Global";
 import CommunityBg from "../images/ic_communitybg.svg"
 const UpperDiv = styled.div`
     width: 98vw;
@@ -12,15 +12,31 @@ const Heading = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: regular;
     font-size: 30px;
-    padding-left: 100px;
-    margin-top: 100px;
+    padding-left: 20px;
+    margin-top: 30px;
     color:${lightTheme.primary};
+    @media ${device.tablet} {
+        bottom: 0px;
+        left: 0px;
+        padding-left: 100px;
+        margin-top: 80px;
+    }
 `
+
 const CommunityImg = styled.img`
     position: absolute;
-    top: 80px;
+    top: 40px;
     left: 0px;
-    width: 45vw;
+    width: 98vw;
+    @media ${device.tablet} {
+        bottom: 0px;
+        left: 0px;
+        top: 80px;
+        width: 45vw;
+        display: inline;
+        padding-left: 100px;
+        margin-top: 100px;
+    }
 `
 const HeaderContainer = styled(Row)`
     height:80vh;
@@ -34,11 +50,16 @@ const HeaderContainer = styled(Row)`
     padding-bottom: 20px;
 `
 const CommunityInfoDiv = styled(Col)`
-    min-width: 500px;
+    min-width: 300px;
     height: 98%;
     width: 40vw;
-    margin-left: 60vw;
-    align-items: flex-end;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: flex-start;
+    @media ${device.tablet} {
+        margin-left: 60vw;
+        align-items: flex-end;
+    }
 `
 const RespDetail = styled.p`
     font-size: 16px;
@@ -64,7 +85,6 @@ const RespDetailHeader = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
     width: 40vw;
-    height: 20px;
     margin: 2px;
     margin-top: 50px;
 `

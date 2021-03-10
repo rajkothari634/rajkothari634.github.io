@@ -10,7 +10,6 @@ const SocialDiv = styled(Row)`
     width: 30vw;
 `
 const socialMediaClick = (link)=> {
-    console.log(link);
     window.open(link);
 }
 const MediaLogos = () => {
