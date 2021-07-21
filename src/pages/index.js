@@ -7,6 +7,7 @@ import Award from "../components/award"
 import Skill from "../components/skill"
 import Community from "../components/community";
 import Footer from "../components/footer";
+import SEO from "../components/seo"
 
 const IndexDiv = styled.div`
 overflow: hidden;
@@ -20,7 +21,19 @@ background-color: #f7f7f7;
 }
 `
 export default function Home() {
+  const data = {
+    title: "Raj Kothari",
+    description: "Full Stack Developer | Machine Learning | MongoDb | Tech Writer | Mentor | Mobile Dev | Community Builder | Learner",
+    image: "https://i.ibb.co/LP8cqdd/rkimage.jpg",
+    keywords:["portfolio","rajkohtari634","rajkothari","raj","kohtari","Full Stack Developer", "Software engineer","Machine Learning"]
+  }
   return <IndexDiv>
+    <SEO
+        title={data.title}
+        description={data.description}
+        image={data.image}
+        keywords={data.keywords}
+      />
     <General/>
     <AboutMe/>
     <Blogs/>
