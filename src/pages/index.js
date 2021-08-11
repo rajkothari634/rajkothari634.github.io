@@ -7,7 +7,8 @@ import Award from "../components/award"
 import Skill from "../components/skill"
 import Community from "../components/community";
 import Footer from "../components/footer";
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import dataImage from "../images/mlstartArticleBg.png";
 
 const IndexDiv = styled.div`
 overflow: hidden;
@@ -25,13 +26,13 @@ export default function Home() {
     title: "Raj Kothari",
     description: "Full Stack Developer | Machine Learning | MongoDb | Tech Writer | Mentor | Mobile Dev | Community Builder | Learner",
     image: "https://i.ibb.co/LP8cqdd/rkimage.jpg",
-    keywords:["portfolio","rajkohtari634","rajkothari","raj","kohtari","Full Stack Developer", "Software engineer","Machine Learning"]
+    keywords:["portfolio","rajkothari634","rajkothari","raj","kothari","Full Stack Developer", "Software engineer","Machine Learning"]
   }
   return <IndexDiv>
     <SEO
         title={data.title}
         description={data.description}
-        image={data.image}
+        image={dataImage}
         keywords={data.keywords}
       />
     <General/>
