@@ -8,6 +8,15 @@ module.exports = {
   /* Your site config here */
   pathPrefix: "/portfolio",
   plugins: [],
+  siteMetadata: {
+    title: "Raj Kothari",
+    titleTemplate: "%s · Portfolio",
+    description:
+      "Full Stack Developer | Machine Learning | MongoDb | Tech Writer | Mentor | Mobile Dev | Community Builder | Learner",
+    url: "https://bit.ly/rajkothari634", // No trailing slash allowed!
+    image: "/src/images/mlstartArticleBg.png", // Path to your image you placed in the 'static' folder
+    
+  },
 }
 
 const config = {
