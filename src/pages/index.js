@@ -7,6 +7,7 @@ import Award from "../components/award"
 import Skill from "../components/skill"
 import Community from "../components/community";
 import Footer from "../components/footer";
+import Helmet from "react-helmet";
 import SEO from "../components/seo";
 import dataImage from "../images/mlstartArticleBg.png";
 
@@ -29,17 +30,33 @@ export default function Home() {
     keywords:["portfolio","rajkothari634","rajkothari","raj","kothari","Full Stack Developer", "Software engineer","Machine Learning"]
   }
   return <IndexDiv>
-    
-     <meta property="og:title" content={data.title} data-rh="true"/>
-     <meta property="og:description" content={data.description} data-rh="true"/>
-     <meta property="og:image" content={data.image} data-rh="true"/>
-       {//     <SEO
-//         title={data.title}
-//         description={data.description}
-//         image={dataImage}
-//         keywords={data.keywords}
-//       />
-     }
+    <Helmet
+      title="Raj Kothari Portfolio"
+      meta={[
+        {
+          property: `og:title`,
+          content: data.title,
+        },
+        {
+          property: `og:type`,
+          content: "website",
+        },
+        {
+          property: `og:image`,
+          content: data.image,
+        },
+        {
+          property: 'og:description',
+          content: data.description
+        }
+      ]}
+    />
+    {/* <SEO
+      title={data.title}
+      description={data.description}
+      image={dataImage}
+      keywords={data.keywords}
+    /> */}
     <General/>
     <AboutMe/>
     <Blogs/>
