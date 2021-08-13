@@ -38,7 +38,8 @@ export default function Home() {
 //         description={data.description}
 //         image={dataImage}
 //         keywords={data.keywords}
-//       />}
+//       />
+     }
     <General/>
     <AboutMe/>
     <Blogs/>
