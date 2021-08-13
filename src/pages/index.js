@@ -30,33 +30,14 @@ export default function Home() {
     keywords:["portfolio","rajkothari634","rajkothari","raj","kothari","Full Stack Developer", "Software engineer","Machine Learning"]
   }
   return <IndexDiv>
-    <Helmet
-      title="Raj Kothari Portfolio"
-      meta={[
-        {
-          property: `og:title`,
-          content: data.title,
-        },
-        {
-          property: `og:type`,
-          content: "website",
-        },
-        {
-          property: `og:image`,
-          content: data.image,
-        },
-        {
-          property: 'og:description',
-          content: data.description
-        }
-      ]}
-    />
-    {/* <SEO
+   
+    <SEO
       title={data.title}
       description={data.description}
-      image={dataImage}
-      keywords={data.keywords}
-    /> */}
+      siteUrl={"https://bit.ly/rajkothari634"}
+      imageUrl={`https://i.ibb.co/LP8cqdd/rkimage.jpg`}
+    />
+    uii
     <General/>
     <AboutMe/>
     <Blogs/>
