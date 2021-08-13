@@ -22,7 +22,7 @@ const SEO = ({ description, title, siteUrl,imageUrl}) => {
 
     return <Helmet
     title={title}
-    titleTemplate={`%s · ${title}`}
+    titleTemplate={`${title}`}
     defaultTitle={title}
     meta={[
         {
