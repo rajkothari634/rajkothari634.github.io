@@ -37,7 +37,7 @@ export default function Home() {
       siteUrl={"https://bit.ly/rajkothari634"}
       imageUrl={`https://i.ibb.co/LP8cqdd/rkimage.jpg`}
     />
-    uii
+    
     <General/>
     <AboutMe/>
     <Blogs/>
