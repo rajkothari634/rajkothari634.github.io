@@ -29,12 +29,16 @@ export default function Home() {
     keywords:["portfolio","rajkothari634","rajkothari","raj","kothari","Full Stack Developer", "Software engineer","Machine Learning"]
   }
   return <IndexDiv>
-    <SEO
-        title={data.title}
-        description={data.description}
-        image={dataImage}
-        keywords={data.keywords}
-      />
+    
+     <meta property="og:title" content={data.title} data-rh="true"/>
+     <meta property="og:description" content={data.description} data-rh="true"/>
+     <meta property="og:image" content={data.image} data-rh="true"/>
+//     <SEO
+//         title={data.title}
+//         description={data.description}
+//         image={dataImage}
+//         keywords={data.keywords}
+//       />
     <General/>
     <AboutMe/>
     <Blogs/>
