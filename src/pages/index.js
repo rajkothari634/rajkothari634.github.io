@@ -11,22 +11,6 @@ import Helmet from "react-helmet";
 import SEO from "../components/seo";
 import dataImage from "../images/mlstartArticleBg.png";
 
-
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
-  /**
-   * @type {any[]} headComponents
-   */
-  const headComponents = getHeadComponents();
-
-  headComponents.sort((a, b) => {
-      if (a.props && a.props["data-react-helmet"]) {
-          return 0;
-      }
-      return 1;
-  });
-  replaceHeadComponents(headComponents);
-};
-
 const IndexDiv = styled.div`
 overflow: hidden;
 width: 98vw;
