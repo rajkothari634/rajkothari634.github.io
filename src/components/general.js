@@ -153,7 +153,7 @@ const GeneralBackBg = styled.img`
     }
 `
 const viewResume = () => {
-    window.open("https://docs.google.com/document/d/1dnN9jUmz0DxCQ4pkfopS8FLg7Js4I8wthT9_H_0Rylc/edit?usp=sharing")
+    window.open("https://drive.google.com/file/d/1XzaEV9ulCfUX8C3f0nAYElYvyp576Q2E/view?usp=sharing")
 }
 const General = (props) => {
     return <GeneralDiv>

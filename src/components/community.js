@@ -57,7 +57,7 @@ const CommunityInfoDiv = styled(Col)`
     margin-right: 5vw;
     align-items: flex-start;
     @media ${device.tablet} {
-        margin-left: 60vw;
+        margin-left: 70vw;
         align-items: flex-end;
     }
 `

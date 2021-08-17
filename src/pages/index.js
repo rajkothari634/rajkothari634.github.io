@@ -31,7 +31,6 @@ export default function Home() {
   }
   
   return <IndexDiv>
-    
     <SEO
       title={data.title}
       description={data.description}

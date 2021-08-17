@@ -11,76 +11,76 @@
             "title":"SVM",
             "date":"12-10-2020",
             "imgUrl":"svmArticleBg",           
-            "path":"https://learnturtle.co/articles/machine-learning/support-vector-machine/"
+            "path":"https://learnturtle.netlify.app/articles/machine-learning/support-vector-machine/"
         },
         {
             "topic":"Tech Writting",
             "title":"Learn Turtle",
             "date":"12-10-2020",
             "imgUrl":"learnturtleArticleBg",
-            "path":"https://learnturtle.co/articles/general/learnturtle-writer-form-guidance/"
+            "path":"https://learnturtle.netlify.app/articles/general/learnturtle-writer-form-guidance/"
         },
         {
             "topic":"Python",
             "title":"XML Parser Using Python",
             "date":"12-10-2020",
             "imgUrl":"pythonArticleBg",
-            "path":"https://learnturtle.co/articles/programming/xml-parser-using-python/"
+            "path":"https://learnturtle.netlify.app/articles/programming/xml-parser-using-python/"
         },
         {
             "topic":"Machine Learning",
             "title":"How to start Machine Learning",
             "date":"12-10-2020",
             "imgUrl":"mlstartArticleBg",
-            "path":"https://learnturtle.co/articles/machine-learning/how-to-start-machine-learning/"
+            "path":"https://learnturtle.netlify.app/articles/machine-learning/how-to-start-machine-learning/"
         },
         {
             "topic":"Technology",
             "title":"Is Graphene The Future of Computing??",
             "date":"12-10-2020",
             "imgUrl":"graphine",
-            "path":"https://learnturtle.co/articles/electronics/is-graphene-the-future-of-computing/"
+            "path":"https://learnturtle.netlify.app/articles/electronics/is-graphene-the-future-of-computing/"
         }
     ],
     "techSkill": [
         {
             "techArea":"NodeJs",
-            "techStrength": 9.5
+            "techStrength": 10
         },
         {
             "techArea":"MongoDb",
-            "techStrength": 9
+            "techStrength": 10
         },
         {
             "techArea":"ReactJs",
-            "techStrength": 9
+            "techStrength": 10
+        },
+        {
+            "techArea":"Data Structures and Algorithms",
+            "techStrength": 10
+        },
+        {
+            "techArea":"Java",
+            "techStrength": 10
         },
         {
             "techArea":"Android Application Development",
-            "techStrength": 9.5
+            "techStrength": 9.0
         },
         {
             "techArea":"Machine Learning",
             "techStrength": 8.5
         },
         {
-            "techArea":"Data Structure And Algorithm",
-            "techStrength": 8
-        },
-        {
-            "techArea":"Postgresql",
-            "techStrength": 7
-        },
-        {
-            "techArea":"Angular Js 8",
-            "techStrength": 7
+            "techArea":"PostgreSQL",
+            "techStrength": 9
         }
     ],
     "otherSkill": [
         {
-            "detail":"Always there to make changes using programming.",
+            "detail":"Passionate to bring change using programming.",
             "heading":"Programmer",
-            "imageUrl":"https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png"
+            "imageUrl":"https://i.ibb.co/1QTbWzD/coding.png"
         },
         {
             "detail":"Spreading knowldege through tech blog in my free time and for freelancing.",
@@ -88,12 +88,12 @@
             "imageUrl":"https://i.ibb.co/xzqGj5m/feather-pen-2.png"
         },
         {
-            "detail":"Mentoring person to develop themselve and me too.",
+            "detail":"Mentoring students to improve their deveoper skills.",
             "heading":"Mentor",
             "imageUrl":"https://www.pinclipart.com/picdir/big/199-1993722_looking-for-a-mentor-comments-mentor-symbol-clipart.png"
         },
         {
-            "detail":"I love to play table tennis and won several competition in table tennis too.",
+            "detail":"I love to play table tennis.",
             "heading":"Table Tennis Player",
             "imageUrl":"https://i.ibb.co/NsXv0K5/table-tennis-1.png"
         },
