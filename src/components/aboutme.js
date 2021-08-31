@@ -54,7 +54,7 @@ const AboutMe = (props) => {
         <AboutMeBackImg  src={aboutmebg} />
         <AboutMeDetail>
             <Heading>About Me</Heading>
-            <Detail>I am a 3rd year student pursuing B.Tech in Computer Sceince and Engineering, National Institute of Technology, Patna. I am a passionate developer. I am experienced in developing hybrid & native mobile apps, web applications and machine learning. </Detail>
+            <Detail>I am a 4th year student pursuing B.Tech in Computer Sceince and Engineering, National Institute of Technology, Patna. I am a passionate developer. I am experienced in developing hybrid & native mobile apps, web applications and machine learning. </Detail>
             <Detail>I am a community builder and I am Vice President in Hackslash Developers Club NIT Patna and Machine Learning Lead in DSC NIT Patna. I always support Open Source and spreading knowldege through mentoring and tech blogs.</Detail>
         </AboutMeDetail>
     </AboutMeDiv>
