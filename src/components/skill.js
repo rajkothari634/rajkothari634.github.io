@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components"
+import React, {useContext} from "react";
+import styled,{ ThemeContext } from "styled-components"
 import { lightTheme, Row, Col, RocketLogo, device} from "./Global";
 import MyData from "../../mydata.json";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -24,7 +24,7 @@ const BorderLinearProgress = withStyles((theme) => ({
 const AboveDiv = styled(Row)`
     width: 99vw;
     min-height: 99vh;
-    background-color: #f7f7f7;
+    background-color: ${props=>props.theme.background};
     white-space: nowrap;
     overflow-x:scroll;
 `
@@ -38,7 +38,7 @@ const SkillArea = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: semi-bold;
 `
@@ -61,7 +61,7 @@ const SideContainerSkill = styled.div`
 const OtherSkillDiv = styled(Row)`
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: ${props=>props.theme.dark};
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -72,7 +72,7 @@ const OtherSkillDiv = styled(Row)`
 const OtherSkillHeading = styled.div`
     width: 100%;
     text-align: center;
-    color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-size: 1.2em;
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -80,7 +80,7 @@ const OtherSkillHeading = styled.div`
 const OtherSkillDetail = styled.div`
     width: 95%;
     text-align: center;
-    color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-size: 14px;
     white-space: pre-wrap;
     padding: 5px;
@@ -102,7 +102,7 @@ const Heading = styled.p`
     font-size: 30px;
     text-align: center;
     margin-top: 0px;
-    color:${lightTheme.primary};
+    color:${props=>props.theme.primary};
     @media ${device.tablet} {
         margin-top: 10vh;
     }
@@ -146,6 +146,7 @@ const getTechArray = () => {
     return rows;
 }
 const Skill = (props) => {
+    const themeContext = useContext(ThemeContext)
     return <AboveDiv>
         {/* <img src={blogBg} style={{marginLeft:"8vw",position: "absolute",width:"90vw",height:"90vh"}}/> */}
         {/* <HeaderContainer> */}

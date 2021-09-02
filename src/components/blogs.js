@@ -1,6 +1,7 @@
-import React, { useRef } from "react"
-import styled from "styled-components"
-import { lightTheme, darkTheme, device,Row, Col, LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
+import React, {useContext,useRef } from "react"
+import styled ,{ ThemeContext } from "styled-components"
+import { useScroll } from "react-use-gesture";
+import { device,Row, Col} from "./Global";
 import myData from "../../mydata.json"
 import clock from "../images/ic_person.svg"
 import blogBg from "../images/ic_blogbg.svg"
@@ -10,12 +11,14 @@ import SvmImage from "../images/svmArticleBg.jpeg"
 import Graphine from "../images/graphine.jpg"
 import LearnTurtle from "../images/learnturtleArticleBg.jpeg"
 import MlStart from "../images/mlstartArticleBg.png"
-import PythonArticle from "../images/pythonArticleBg.png"
+import PythonArticle from "../images/pythonArticleBg.png"   
+import { animated, useSpring } from "react-spring";
+
 
 const Div = styled.div`
     width: 100vw;
     min-height: 99vh;
-    background-color: #f7f7f7;
+    background-color: ${props=>props.theme.background};
 `
 const HeaderContainer = styled.div`
 height:90vh;
@@ -158,7 +161,7 @@ const TopArticleCategory = styled.a`
         
     }
 `
-const MainArticleContainer = styled.div`
+const MainArticleContainer = styled(animated.div)`
     margin: 40px;
     margin-top: 0px;
     margin-right: 80px;
@@ -169,7 +172,7 @@ const MainArticleContainer = styled.div`
     display: inline-block;
     zoom: 1;
 `
-const SideArticleContainer = styled.div`
+const SideArticleContainer = styled(animated.div)`
     width: 30vw;
     min-width: 250px;
     height: 40%;
@@ -181,7 +184,7 @@ const Heading = styled.p`
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    color:${lightTheme.primary};
+    color:${props=>props.theme.primary};
 `
 const getImage = (image) => {
     switch(image){
@@ -217,10 +220,10 @@ const TopArticleCard = (props) => {
     </TopArticleCardContainer>
 
 }
-const getArticleColArray = () => {
+const getArticleColArray = (flipAnimationStyle) => {
     let rows = [];
     let articleArray = myData["articles"];
-    let mainContainer = <MainArticleContainer>
+    let mainContainer = <MainArticleContainer style= {flipAnimationStyle}>
     <TopArticleCard titleSize={"28px"} 
         title={articleArray[0].title} 
         category={articleArray[0].topic}
@@ -231,7 +234,7 @@ const getArticleColArray = () => {
     rows.push(mainContainer);
     for(let i = 1; i<articleArray.length; i=i+2){
         let col = <HeaderSideSingleCol>
-        <SideArticleContainer>
+        <SideArticleContainer style= {flipAnimationStyle}>
             <TopArticleCard titleSize={"22px"} 
             title={articleArray[i].title} 
             category={articleArray[i].topic}
@@ -239,7 +242,7 @@ const getArticleColArray = () => {
             path={articleArray[i].path}
             imgUrl={articleArray[i].imgUrl}/>
         </SideArticleContainer>
-        {articleArray[i+1] !== undefined ?<SideArticleContainer>
+        {articleArray[i+1] !== undefined ?<SideArticleContainer style= {flipAnimationStyle}>
             <TopArticleCard titleSize={"22px"} 
                  title={articleArray[i+1].title} 
                  category={articleArray[i+1].topic}
@@ -254,12 +257,30 @@ const getArticleColArray = () => {
 } 
 
 const TopArticlesList = (props) => {
+    const themeContext = useContext(ThemeContext)
+    const [flipAnimationStyle,setSlipAnimation] = useSpring(() => ({
+        transform: "perspective(500px) rotateY(0deg)"
+    }));
+    const bind = useScroll(event => {
+        setSlipAnimation({
+          transform: `perspective(500px) rotateY(${
+            event.scrolling ? clamp(event.delta[0]) : 0
+          }deg)`
+        });
+      });
+    const clamp = (value, clampAt = 30) => {
+        if (value > 0) {
+          return value > clampAt ? clampAt : value;
+        } else {
+          return value < -clampAt ? -clampAt : value;
+        }
+    };
     return (
         <Div>
             <img src={blogBg} style={{marginLeft:"8vw",position: "absolute",width:"90vw",height:"90vh"}}/>
             <Heading>Blogs</Heading>
-            <HeaderContainer>
-                {getArticleColArray()}
+            <HeaderContainer {...bind()}>
+                {getArticleColArray(flipAnimationStyle)}
             </HeaderContainer>
         </Div>
     )

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components"
+import React, {useRef,useContext} from "react";
+import styled,{ ThemeContext } from "styled-components"
 import { lightTheme,Row, Col, device} from "./Global";
 import CommunityBg from "../images/ic_communitybg.svg"
 const UpperDiv = styled.div`
-    width: 98vw;
+    width: 99vw;
     height: 97vh;
     position: relative;
-    background-color: ${lightTheme.background};
+    background-color: ${props=>props.theme.background};
 `
 const Heading = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
@@ -14,7 +14,7 @@ const Heading = styled.p`
     font-size: 30px;
     padding-left: 20px;
     margin-top: 30px;
-    color:${lightTheme.primary};
+    color:${props=>props.theme.primary};
     @media ${device.tablet} {
         bottom: 0px;
         left: 0px;
@@ -40,7 +40,7 @@ const CommunityImg = styled.img`
 `
 const HeaderContainer = styled(Row)`
     height:80vh;
-    width: 97vw;
+    width: 99vw;
     white-space: nowrap;
     position: absolute;
     bottom: 0px;
@@ -63,7 +63,7 @@ const CommunityInfoDiv = styled(Col)`
 `
 const RespDetail = styled.p`
     font-size: 16px;
-    font-color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
     width: 40vw;
@@ -72,7 +72,7 @@ const RespDetail = styled.p`
 `
 const RespDate = styled.p`
     font-size: 12px;
-    font-color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
     width: 40vw;
@@ -81,7 +81,7 @@ const RespDate = styled.p`
 `
 const RespDetailHeader = styled.p`
     font-size: 16px;
-    font-color: ${lightTheme.primary};
+    color: ${props=>props.theme.primary};
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-weight: bold;
     width: 40vw;
@@ -93,24 +93,42 @@ const RespImg = styled.img`
     margin-bottom: 10%;
     border-radius: 10px;
 `
-const Community = () => {
-    return <UpperDiv>
+const Community = (props) => {
+    // const onWheel = e => {
+    //     e.preventDefault();
+    //     const container = scrollRef.current;
+    //     const containerScrollPosition = scrollRef.current.scrollLeft;
+    //     console.log("check")
+    // console.log(container);
+    // console.log(containerScrollPosition);
+    // props.yPosRecord(containerScrollPosition);
+    //     container.scrollTo({
+    //       top: 0,
+    //       left: containerScrollPosition + e.deltaY
+    //     });
+    //   };
+    
+    //   const scrollRef = useRef(null);
+
+    const themeContext = useContext(ThemeContext)
+    return <UpperDiv >
         <Heading>Building Community</Heading>
         <CommunityImg src={CommunityBg} />
+        {/* <HeaderContainer ref={scrollRef} onWheel={onWheel}> */}
         <HeaderContainer>
             <CommunityInfoDiv>
                 <RespImg src={"https://avatars0.githubusercontent.com/u/71489907?s=200&v=4"} />
                 <RespDetailHeader>{"Machine Learning Lead"}</RespDetailHeader>
                 <RespDetail>{"Developer Student Club"}</RespDetail>
                 <RespDetail>{"National Institute of Technology"}</RespDetail>
-                <RespDate>{"JULY 2020 - Present"}</RespDate>
+                <RespDate>{"JULY 2020 - APRIL 2021"}</RespDate>
             </CommunityInfoDiv>
             <CommunityInfoDiv>
                 <RespImg src={"https://avatars2.githubusercontent.com/u/53945279?s=200&v=4"} />
                 <RespDetailHeader>{"Vice President"}</RespDetailHeader>
                 <RespDetail>{"Hackslash"}</RespDetail>
                 <RespDetail>{"National Institute of Technology"}</RespDetail>
-                <RespDate>{"JUNE 2020 - Present"}</RespDate>
+                <RespDate>{"JUNE 2020 - APRIL 2021"}</RespDate>
             </CommunityInfoDiv>
             <CommunityInfoDiv>
                 <RespImg src={"https://avatars2.githubusercontent.com/u/53945279?s=200&v=4"} />
@@ -119,7 +137,9 @@ const Community = () => {
                 <RespDetail>{"National Institute of Technology"}</RespDetail>
                 <RespDate>{"AUGUST 2019 - JUNE 2020"}</RespDate>
             </CommunityInfoDiv>
+           
         </HeaderContainer>
+       
     </UpperDiv>
 }
 

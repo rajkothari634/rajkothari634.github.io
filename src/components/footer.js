@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, {useContext} from "react";
+import styled,{ ThemeContext } from "styled-components"
 import { MediumLogo, Row, Col,LinkedInLogo, InstaLogo ,GithubLogo} from "./Global";
 import MyData from "../../mydata.json";
 
@@ -12,34 +12,34 @@ const SocialDiv = styled(Row)`
 const socialMediaClick = (link)=> {
     window.open(link);
 }
-const MediaLogos = () => {
+const MediaLogos = (props) => {
     let socialMedia = MyData.socialMedia;
     let rows = [];
     for(let key in socialMedia){
         switch(key){
             case "insta":
                 rows.push(<div style={{margin: "10px",cursor: "pointer"}} onClick={() =>{socialMediaClick(socialMedia[key])}}>
-                    <InstaLogo/>
+                    <InstaLogo color={props.color}/>
                 </div>)
                 break;
             case "github":
                 rows.push(<div style={{margin: "10px",cursor: "pointer"}} onClick={() => {socialMediaClick(socialMedia[key])}}>
-                    <GithubLogo/>
+                    <GithubLogo color={props.color}/>
                 </div>)
                 break;
             case "linkedin":
                 rows.push(<div style={{margin: "10px",cursor: "pointer"}} onClick={() => {socialMediaClick(socialMedia[key])}}>
-                    <LinkedInLogo/>
+                    <LinkedInLogo color={props.color}/>
                 </div>)
                 break;   
             case "medium":
                 rows.push(<div style={{margin: "10px",cursor: "pointer"}} onClick={() => {socialMediaClick(socialMedia[key])}}>
-                    <MediumLogo/>
+                    <MediumLogo color={props.color}/>
                 </div>)  
                 break;
             default :
                 rows.push(<div style={{margin: "10px",cursor: "pointer"}} onClick={() => {socialMediaClick(socialMedia[key])}}>
-                    <InstaLogo/>
+                    <InstaLogo color={props.color}/>
                 </div>)
         }
     }
@@ -52,13 +52,14 @@ const FooterDiv = styled(Col)`
     justify-content: center;
     align-items: center;
     border-top: 1px solid #cacaca;
-    background-color: #ffffff;
+    background-color: ${props=>props.theme.dark};
 `
 
 const Footer = (props) => {
+    const themeContext = useContext(ThemeContext);
     return <FooterDiv>
         <SocialDiv>
-            <MediaLogos/>
+            <MediaLogos color={themeContext.primary}/>
         </SocialDiv>
     </FooterDiv>
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components"
+import React, {useContext} from "react";
+import styled,{ ThemeContext } from "styled-components"
 import { lightTheme, Col, device} from "./Global";
 import graduation from "../images/ic_graduation.svg"
 import tabletennis from "../images/ic_tabletennis.svg"
@@ -10,7 +10,7 @@ const ItemDiv = styled(Col)`
     width: 100%;
     height: 330px;
     align-items: center;
-    background: #fff;
+    background: ${props=>props.theme.dark};
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     &: hover {
@@ -20,7 +20,7 @@ const ItemDiv = styled(Col)`
 const AwardDiv = styled.div`
     width: 100vw;
     min-height: 98vh;
-    background-color: ${lightTheme.background};
+    background-color: ${props => props.theme.background};
     top: 288vh;
 `
 const Heading = styled.p`
@@ -28,7 +28,7 @@ const Heading = styled.p`
     font-weight: bold;
     font-size: 35px;
     text-align: center;
-    color:${lightTheme.primary};
+    color:${props => props.theme.primary};
     margin: 20px;
     margin-top: 10px;
     @media ${device.tablet} {
@@ -39,6 +39,7 @@ const Heading = styled.p`
 const ItemTitle = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
+    color:${props=>props.theme.primary};
     font-weight: bold;
     text-align: center;
     margin: 25px;
@@ -47,11 +48,13 @@ const ItemTitle = styled.p`
 const ItemDetail = styled.p`
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-size: 1em;
+    color:${props=>props.theme.primary};
     text-align: center;
     margin: 25px;
     margin-bottom: 10px;    
 `
 const Award = (props) => {
+    const themeContext = useContext(ThemeContext)
     return <AwardDiv>
         <Heading>Award</Heading>
         <Grid container spacing={3} style={{marginTop: "10px",marginBottom: "20px"}} justify={"space-around"}>
