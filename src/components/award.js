@@ -18,7 +18,7 @@ const ItemDiv = styled(Col)`
     }
 `
 const AwardDiv = styled.div`
-    width: 100vw;
+    width: 100%;
     min-height: 98vh;
     background-color: ${props => props.theme.background};
     top: 288vh;
