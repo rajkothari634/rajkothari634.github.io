@@ -17,6 +17,7 @@ const lightTheme = {
     code_text: "#e5f5fc",
     background: "#f7f7f7",
     disabled: "#CACACA",
+    invisible: "#00000000",
     ...fontSet
 }
 
@@ -31,6 +32,7 @@ const darkTheme = {
     code_text: "#dfe4dc",
     background: "#38383c",
     disabled: "#888",
+    invisible: "#00000000",
     ...fontSet
 }
 
