@@ -4,7 +4,7 @@ import { device, Row, Col} from "./Global";
 import aboutmebg from "../images/ic_aboutmebg.svg"
 
 const AboutMeDiv = styled(Row)`
-    width: 99vw;
+    width: 100%;
     min-height: 99vh;
     position: relative;
     background-color: ${props => props.theme.background};
