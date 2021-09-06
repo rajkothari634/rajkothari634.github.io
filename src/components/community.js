@@ -3,7 +3,7 @@ import styled,{ ThemeContext } from "styled-components"
 import { lightTheme,Row, Col, device} from "./Global";
 import CommunityBg from "../images/ic_communitybg.svg"
 const UpperDiv = styled.div`
-    width: 99vw;
+    width: 100%;
     height: 97vh;
     position: relative;
     background-color: ${props=>props.theme.background};
