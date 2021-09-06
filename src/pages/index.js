@@ -5,8 +5,9 @@ import 'react-full-page-scroller/dist/index.css';
 import General from "../components/general";
 import AboutMe from "../components/aboutme";
 import Blogs from "../components/blogs";
+import Header from "../components/header";
 import WorkExperience from "../components/work";
-// import "../components/index.css"
+import "../components/index.css"
 import Award from "../components/award"
 import Skill from "../components/skill"
 import Community from "../components/community";
@@ -60,15 +61,16 @@ const Home = () =>  {
 
 
   return  <ThemeProvider theme={theme}>
-  {/* <IndexDiv ref={scrollRef} onWheel={onWheel}> */}
-  <IndexDiv>
-
+    
     <SEO
       title={data.title}
       description={data.description}
       siteUrl={"https://bit.ly/rajkothari634"}
       imageUrl={`https://i.ibb.co/LP8cqdd/rkimage.jpg`}
     />
+  {/* <IndexDiv ref={scrollRef} onWheel={onWheel}> */}
+  <IndexDiv>
+    {/* <Header   toggleDarkMode={toggleDarkMode} darkMode={darkMode}/> */}
       <General  toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <AboutMe/>
       <Blogs/>
