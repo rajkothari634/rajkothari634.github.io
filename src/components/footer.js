@@ -46,7 +46,7 @@ const MediaLogos = (props) => {
     return rows
 }
 const FooterDiv = styled(Col)`
-    width: 99vw;
+    width: 100%;
     height: 30px;
     padding: 15px;
     justify-content: center;
