@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&family=Ropa+Sans&family=Source+Code+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Source+Serif+Pro:wght@300;400;500&display=swap");
-
 body {
   margin: 0;
   padding: 0;
@@ -10,20 +7,3 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #25262e;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0079c1;
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #faca2a;
-} */
