@@ -22,12 +22,14 @@ const BorderLinearProgress = withStyles((theme) => ({
 
 
 const AboveDiv = styled(Row)`
-    width: 99vw;
+    width: 100%;
     min-height: 99vh;
+    position: relative;
     background-color: ${props=>props.theme.background};
     white-space: nowrap;
     overflow-x:scroll;
 `
+
 const SkillArea = styled.div`
     font-size: 1.2em;
     margin-top: 15px;
@@ -146,11 +148,18 @@ const getTechArray = () => {
     return rows;
 }
 const Skill = (props) => {
-    const themeContext = useContext(ThemeContext)
-    return <AboveDiv>
-        {/* <img src={blogBg} style={{marginLeft:"8vw",position: "absolute",width:"90vw",height:"90vh"}}/> */}
-        {/* <HeaderContainer> */}
-       
+    const themeContext = useContext(ThemeContext);
+    // const onWheel = e => {
+    //     e.preventDefault();
+    //     const container = scrollRef.current;
+    //     const containerScrollPosition = scrollRef.current.scrollLeft;
+    //     container.scrollTo({
+    //       top: 0,
+    //       left: containerScrollPosition + e.deltaY
+    //     });
+    // };
+    // const scrollRef = useRef(null);
+    return <AboveDiv>       
         <div>
             <Heading>Technical Skills</Heading>
             <TechContainerSkill>
@@ -160,13 +169,11 @@ const Skill = (props) => {
             </TechContainerSkill>
         </div>
         <div>
-                <Heading>My Skills</Heading>
-                <Row style={{marginRight:"30px",height:"70vh"}}>
-                    {getOtherSkill()}
-                </Row>
+            <Heading>My Skills</Heading>
+            <Row style={{marginRight:"30px",height:"70vh"}}>
+                {getOtherSkill()}
+            </Row>
         </div>
-            
-        {/* </HeaderContainer> */}
     </AboveDiv>
 }
 
