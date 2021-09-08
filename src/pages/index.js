@@ -1,11 +1,8 @@
 import React,{useState,useRef} from "react"
 import styled, {ThemeProvider} from "styled-components";
-import PageIndex from  'react-full-page-scroller';
-import 'react-full-page-scroller/dist/index.css';
 import General from "../components/general";
 import AboutMe from "../components/aboutme";
 import Blogs from "../components/blogs";
-import Header from "../components/header";
 import WorkExperience from "../components/work";
 import "../components/index.css"
 import Award from "../components/award"
@@ -42,24 +39,17 @@ const Home = () =>  {
     localStorage.setItem("dark", JSON.stringify(darkModeBool))
     setDarkMode(darkModeBool)
   }  
-  // const onWheel = e => {
-
-  //   if(e.deltaX>0&&posComm.yPos<(window.innerWidth-5)){
-  //     e.preventDefault();
-  //     //do move community
-  //   }
-
-  //   console.log("check")
-  // };
-  // const scrollRef = useRef(null);
-  // const commYPositionRecord = (yPos) => {
-  //   setPosComm({
-  //     active: true,
-  //     yPos: yPos
-  //   })
-  // }
-
-
+    // const onWheel = e => {
+    //     e.preventDefault();
+    //     const container = scrollRef.current;
+    //     const containerScrollPosition = scrollRef.current.scrollLeft;
+    //     container.scrollTo({
+    //       top: 0,
+    //       left: containerScrollPosition + e.deltaY
+    //     });
+    // };
+    // const scrollRef = useRef(null);
+ 
   return  <ThemeProvider theme={theme}>
     
     <SEO
@@ -71,11 +61,11 @@ const Home = () =>  {
   {/* <IndexDiv ref={scrollRef} onWheel={onWheel}> */}
   <IndexDiv>
     {/* <Header   toggleDarkMode={toggleDarkMode} darkMode={darkMode}/> */}
-      <General  toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
+      <General toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <AboutMe/>
       <Blogs/>
       <WorkExperience/>
-      <Skill/>
+      <Skill />
       {/* <Community yPosRecord={commYPositionRecord}/> */}
       <Community/>
       <Award/>
