@@ -101,7 +101,6 @@ const Community = (props) => {
     //     console.log("check")
     // console.log(container);
     // console.log(containerScrollPosition);
-    // props.yPosRecord(containerScrollPosition);
     //     container.scrollTo({
     //       top: 0,
     //       left: containerScrollPosition + e.deltaY
@@ -136,8 +135,7 @@ const Community = (props) => {
                 <RespDetail>{"Hackslash"}</RespDetail>
                 <RespDetail>{"National Institute of Technology"}</RespDetail>
                 <RespDate>{"AUGUST 2019 - JUNE 2020"}</RespDate>
-            </CommunityInfoDiv>
-           
+            </CommunityInfoDiv>      
         </HeaderContainer>
        
     </UpperDiv>
