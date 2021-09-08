@@ -46,51 +46,59 @@ const WorkExperience = () =>  {
     
   return (
     <WorkDiv>
-        <Heading>Work Experience</Heading>
-        <Timeline align="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color={themeContext.primary}>
-            APRIL 2020 - JUNE 2020
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot>
-            <LaptopMacIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Earnest Fintech
+      <Heading>Work Experience</Heading>
+      <Timeline align="alternate">
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography variant="body2" color={themeContext.primary}>
+              APRIL 2020 - JUNE 2020
             </Typography>
-            <Typography>I created a reward and order management system for customer use. It maintains rewards by connecting through Wohoo API. The database used is PostgreSQL. NodeJs for the backend. The whole system was deployed by me on Digital Ocean using Docker and Kubernetes. I also created a frontend for a web application that is used by customers. For the frontend, ReactJs is used.</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color={themeContext.primary}>
-            AUGUST 2020 - JANUARY 2021
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot color="primary">
-            <LaptopMacIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Arcatron Mobility
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot>
+              <LaptopMacIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={3} className={classes.paper}>
+              <Typography variant="h6" component="h1">
+                Earnest Fintech
+              </Typography>
+              <Typography>1. Full Stack Development of the project.<br/>
+              2. PostgreSQL is used for database.<br/>
+              3. Developed complete architecture of software for order management system.<br/>
+              4. Docker and Kubernetes is used to deploy on Digital Ocean.<br/>
+              5. Created integration with Wohoo API.</Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography variant="body2" color={themeContext.primary}>
+              AUGUST 2020 - JANUARY 2021
             </Typography>
-            <Typography>I created an inventory management system for the company. It is used to manage inventory of products, supplier operations. User entities are Inventory manager, Channel manager, Admin, Data Analyst. Coordinating with all this for teams, I designed, developed, and deploy the frontend & backend of the system. The tech stacks used are MongoDB, NodeJs, ReactJS, NextJS framework, AWS S3, Heroku, Netlify. Before my system, Company has to pay monthly charges to Magento and with less useful features but with my system less money with customized features and easy to use.</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary">
+              <LaptopMacIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={3} className={classes.paper}>
+              <Typography variant="h6" component="h1">
+                Arcatron Mobility
+              </Typography>
+              <Typography>1. Full Stack Development of the project.<br/>
+              2. MongoDb is used for database.<br/>
+              3. Implemented AWS S3.<br/>
+              4. Developed complete architecture of software for inventory management system.<br/>
+              5. Developed frontend using Nextjs framework.</Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+      </Timeline>
     </WorkDiv>
   );
 }
