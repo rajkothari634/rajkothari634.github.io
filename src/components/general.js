@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import styled,{ ThemeContext } from "styled-components"
+import styled from "styled-components"
 import {device, Row} from "./Global";
 import MyData from "../../mydata.json";
 import BackBg from "../images/ic_backgeneral.svg"
@@ -13,10 +13,10 @@ const GeneralDiv = styled.div`
 `
 
 const HelloDiv = styled.div`
-    position: absolute;
-    width: 90vw;
-    right: 1vw;
-    top: 45vh;
+    position: relative;
+    width: 99vw;
+    right: 0%;
+    top: 35vh;
     @media ${device.tablet} {
         left: 7vw;
         width: 35vw;
@@ -75,7 +75,6 @@ const GeneralBackBg = styled.img`
 `
 
 const General = (props) => {
-    const themeContext = useContext(ThemeContext)
     return <GeneralDiv>
         <GeneralBackBg src={BackBg} />
         <Header  toggleDarkMode={props.toggleDarkMode} darkMode={props.darkMode}/>
@@ -87,7 +86,7 @@ const General = (props) => {
             <IntroDetail>
                 <Typewriter
                     options={{
-                        strings: ["I am a Passionate Developer.", "I am a Tech enthusiast person.","MERN Stack, Mobile Development and Machine Learning are my area of experience.", "I am a Tech blog writer.","I am a Table Tennis Player."],
+                        strings: ["I am a Passionate Developer.", "I am a Tech enthusiast person.","MERN Stack, Mobile Development and Machine Learning are my area of expertise.", "I am a Tech blog writer.","I am a Table Tennis Player."],
                         autoStart: true,
                         loop: true,
                     }}

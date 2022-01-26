@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   pathPrefix: "/portfolio",
-  plugins: ['gatsby-plugin-react-helmet','gatsby-plugin-styled-components'],
+  plugins: ['gatsby-plugin-styled-components'],
   siteMetadata: {
     title: "Raj Kothari",
     titleTemplate: "%s · Portfolio",

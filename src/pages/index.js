@@ -10,11 +10,19 @@ import Skill from "../components/skill"
 import Community from "../components/community";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
-import { darkTheme,lightTheme } from "../components/Global";
+import { Col, darkTheme,lightTheme } from "../components/Global";
 
-const IndexDiv = styled.div`
-width: 100vw;
-background-color: ${props=>props.theme.background};
+const IndexDiv = styled(Col)`
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  display: flex;
+  background-color: ${props=>props.theme.background};
+`
+const ItemDiv = styled.div`
+  width: 100vw;
+  height: 99vh;
+  scroll-snap-align: center;
 `
 const Home = () =>  {
   const data = {
@@ -25,11 +33,7 @@ const Home = () =>  {
   }
   const [darkMode, setDarkMode] = useState((typeof window !== "undefined" && localStorage.getItem("dark") === "true"))
   const [theme, setTheme] = useState((typeof window !== "undefined" && localStorage.getItem("dark") === "true") ? darkTheme : lightTheme)
-  // const [indexX, setIndexX] = useState(0);
-  // const [posComm,setPosComm] = useState({
-  //   active: false,
-  //   yPos: 0
-  // });
+
   const toggleDarkMode = darkModeBool => {
     if (darkModeBool === true) {
         setTheme(darkTheme)
@@ -39,38 +43,39 @@ const Home = () =>  {
     localStorage.setItem("dark", JSON.stringify(darkModeBool))
     setDarkMode(darkModeBool)
   }  
-    // const onWheel = e => {
-    //     e.preventDefault();
-    //     const container = scrollRef.current;
-    //     const containerScrollPosition = scrollRef.current.scrollLeft;
-    //     container.scrollTo({
-    //       top: 0,
-    //       left: containerScrollPosition + e.deltaY
-    //     });
-    // };
-    // const scrollRef = useRef(null);
- 
   return  <ThemeProvider theme={theme}>
-    
     <SEO
       title={data.title}
       description={data.description}
       siteUrl={"https://bit.ly/rajkothari634"}
       imageUrl={`https://i.ibb.co/LP8cqdd/rkimage.jpg`}
     />
-  {/* <IndexDiv ref={scrollRef} onWheel={onWheel}> */}
-  <IndexDiv>
-    {/* <Header   toggleDarkMode={toggleDarkMode} darkMode={darkMode}/> */}
-      <General toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
-      <AboutMe/>
-      <Blogs/>
-      <WorkExperience/>
-      <Skill />
-      {/* <Community yPosRecord={commYPositionRecord}/> */}
-      <Community/>
-      <Award/>
-      <Footer/>
-  </IndexDiv>
+    <IndexDiv>
+      <ItemDiv>
+        <General toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
+      </ItemDiv>
+      <ItemDiv>
+        <AboutMe/>
+      </ItemDiv>
+      <ItemDiv>
+        <Blogs/>
+      </ItemDiv>
+      <ItemDiv>
+        <WorkExperience/>
+      </ItemDiv>
+      <ItemDiv>
+        <Skill />
+      </ItemDiv>
+      <ItemDiv>
+        <Community/>
+      </ItemDiv>
+      <ItemDiv>
+        <Award/>
+      </ItemDiv>
+      <ItemDiv style={{height: "60px"}}>
+        <Footer/>
+      </ItemDiv>
+    </IndexDiv>
   </ThemeProvider>
 }
 

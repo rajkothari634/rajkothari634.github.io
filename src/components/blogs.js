@@ -1,5 +1,5 @@
 import React, {useContext,useRef } from "react"
-import styled ,{ ThemeContext } from "styled-components"
+import styled from "styled-components"
 import { useScroll } from "react-use-gesture";
 import { device,Row, Col} from "./Global";
 import myData from "../../mydata.json"
@@ -18,13 +18,14 @@ import { animated, useSpring } from "react-spring";
 const Div = styled.div`
     width: 100%;
     min-height: 99vh;
+    scroll-snap-align: center;
     background-color: ${props=>props.theme.background};
 `
 const HeaderContainer = styled.div`
-height:90vh;
+height: 90vh;
 white-space: nowrap;
 position: relative;
-overflow-x:scroll;
+overflow-x: scroll;
 `
 const HeaderSideSingleCol = styled(Row)`
     margin: 40px;
@@ -86,7 +87,7 @@ const TopArticleMask = styled.div`
     z-index: 10;
     opacity: 0.5;
     top: 0;
-    transition-duration: 0.4s;
+    transition-duration: 0.1s;
     left: 0;
     border-radius: 4px;
 `
@@ -151,8 +152,6 @@ const TopArticleCategory = styled.a`
     margin-bottom: 17px;
     margin-left: 1px;
     text-decoration: none;
-    transition-duration: 0.2s;
-    
     &:hover {
         margin-bottom: 16px;
         margin-left: 0;
@@ -257,7 +256,6 @@ const getArticleColArray = (flipAnimationStyle) => {
 } 
 
 const TopArticlesList = (props) => {
-    const themeContext = useContext(ThemeContext)
     const [flipAnimationStyle,setSlipAnimation] = useSpring(() => ({
         transform: "perspective(500px) rotateY(0deg)"
     }));

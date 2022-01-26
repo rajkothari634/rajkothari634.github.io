@@ -6,6 +6,7 @@ import aboutmebg from "../images/ic_aboutmebg.svg"
 const AboutMeDiv = styled(Row)`
     width: 100%;
     min-height: 99vh;
+    scroll-snap-align: center;
     position: relative;
     background-color: ${props => props.theme.background};
 `
@@ -41,7 +42,7 @@ const AboutMeDetail = styled(Col)`
     position: absolute;
     justify-content: center;
     align-items: flex-start;
-    bottom: 20vh;
+    bottom: 10vh;
     left: 5vw;
     @media ${device.tablet} {
         width: 30vw;
@@ -51,7 +52,7 @@ const AboutMeDetail = styled(Col)`
 `
 const AboutMe = (props) => {
     
-    const themeContext = useContext(ThemeContext)
+    // const themeContext = useContext(ThemeContext)
     return <AboutMeDiv>
         <AboutMeBackImg  src={aboutmebg} />
         <AboutMeDetail>

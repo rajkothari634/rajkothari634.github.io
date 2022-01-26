@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import styled,{ ThemeContext } from "styled-components"
+import styled from "styled-components"
 import { lightTheme, Row, Col, RocketLogo, device} from "./Global";
 import MyData from "../../mydata.json";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -27,7 +27,11 @@ const AboveDiv = styled(Row)`
     position: relative;
     background-color: ${props=>props.theme.background};
     white-space: nowrap;
-    overflow-x:scroll;
+
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
 `
 
 const SkillArea = styled.div`
@@ -66,7 +70,6 @@ const OtherSkillDiv = styled(Row)`
     background: ${props=>props.theme.dark};
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     &: hover {
         box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
     }
@@ -109,6 +112,9 @@ const Heading = styled.p`
         margin-top: 10vh;
     }
 `
+const Div = styled.div`
+    scroll-snap-align: center;
+`
 const OtherSkill = (props) => {
     return <OtherSkillDiv>
         <img style={{width:"25%",height: "40%",margin:"5%",marginLeft:"10%",marginTop:"0%"}} src={props.imageUrl} />
@@ -148,7 +154,6 @@ const getTechArray = () => {
     return rows;
 }
 const Skill = (props) => {
-    const themeContext = useContext(ThemeContext);
     // const onWheel = e => {
     //     e.preventDefault();
     //     const container = scrollRef.current;
@@ -160,20 +165,20 @@ const Skill = (props) => {
     // };
     // const scrollRef = useRef(null);
     return <AboveDiv>       
-        <div>
+        <Div>
             <Heading>Technical Skills</Heading>
             <TechContainerSkill>
                 <Grid container style={{height: "70vh",width:"99vw"}} spacing={2} alignContent={"space-around"} justify={"space-around"} >
                     {getTechArray()}
                 </Grid>
             </TechContainerSkill>
-        </div>
-        <div>
+        </Div>
+        <Div>
             <Heading>My Skills</Heading>
             <Row style={{marginRight:"30px",height:"70vh"}}>
                 {getOtherSkill()}
             </Row>
-        </div>
+        </Div>
     </AboveDiv>
 }
 
