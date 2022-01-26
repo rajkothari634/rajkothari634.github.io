@@ -50,6 +50,7 @@ const FooterDiv = styled(Col)`
     height: 30px;
     padding: 15px;
     justify-content: center;
+    scroll-snap-align: center;
     align-items: center;
     border-top: 1px solid #cacaca;
     background-color: ${props=>props.theme.dark};

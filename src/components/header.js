@@ -35,7 +35,7 @@ const ResumeDiv = styled(Row)`
     height: 30px;
     font-family: Open-sans, Arial, Helvetica, sans-serif;
     font-size: 18px;
-    transition-duration: 0.4s;
+    transition-duration: 0.1s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: ${props => props.theme.dark};
     color: ${props => props.theme.primary};

@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const WorkDiv = styled.div`
     width: 100vw;
+    scroll-snap-align: center;
     min-height: 50vh;
     background-color: ${props => props.theme.background};
     top: 288vh;

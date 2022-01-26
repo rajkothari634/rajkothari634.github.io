@@ -1,10 +1,12 @@
 import React, {useRef,useContext} from "react";
-import styled,{ ThemeContext } from "styled-components"
+import styled from "styled-components"
 import { lightTheme,Row, Col, device} from "./Global";
 import CommunityBg from "../images/ic_communitybg.svg"
 const UpperDiv = styled.div`
     width: 100%;
     height: 97vh;
+    scroll-snap-align: center;
+    scroll-snap-align: center;
     position: relative;
     background-color: ${props=>props.theme.background};
 `
@@ -43,9 +45,11 @@ const HeaderContainer = styled(Row)`
     width: 99vw;
     white-space: nowrap;
     position: absolute;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
     bottom: 0px;
     left: 0px;
-    overflow-x:scroll;
     align-items: center;
     padding-bottom: 20px;
 `
@@ -56,6 +60,7 @@ const CommunityInfoDiv = styled(Col)`
     margin-left: 5vw;
     margin-right: 5vw;
     align-items: flex-start;
+    scroll-snap-align: end;
     @media ${device.tablet} {
         margin-left: 70vw;
         align-items: flex-end;
@@ -109,7 +114,6 @@ const Community = (props) => {
     
     //   const scrollRef = useRef(null);
 
-    const themeContext = useContext(ThemeContext)
     return <UpperDiv >
         <Heading>Building Community</Heading>
         <CommunityImg src={CommunityBg} />

@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import styled,{ ThemeContext } from "styled-components"
+import styled from "styled-components"
 import { lightTheme, Col, device} from "./Global";
 import graduation from "../images/ic_graduation.svg"
 import tabletennis from "../images/ic_tabletennis.svg"
@@ -12,13 +12,13 @@ const ItemDiv = styled(Col)`
     align-items: center;
     background: ${props=>props.theme.dark};
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     &: hover {
         box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
     }
 `
 const AwardDiv = styled.div`
     width: 100%;
+    scroll-snap-align: center;
     min-height: 98vh;
     background-color: ${props => props.theme.background};
     top: 288vh;
@@ -54,7 +54,6 @@ const ItemDetail = styled.p`
     margin-bottom: 10px;    
 `
 const Award = (props) => {
-    const themeContext = useContext(ThemeContext)
     return <AwardDiv>
         <Heading>Award</Heading>
         <Grid container spacing={3} style={{marginTop: "10px",marginBottom: "20px"}} justify={"space-around"}>
